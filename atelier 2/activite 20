@@ -1,0 +1,57 @@
+mot=input("Entrer le mot : ")
+count=0
+for i in mot:
+    if i in "abcdefjhijklmnopqrstuvwxrz":
+        count+=1
+    elif i==" ":
+        count+=0
+    else:
+        count=0
+if count!=0:   
+    print(f'ce mot est compose de {count} caracterexs')
+else:
+    print("anvalide syntaxe")
+
+def fibonacci(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+
+# Exemple d'utilisation :
+for i in range(10):
+    print(f"F({i}) =", fibonacci(i))
+
+
+adresses_ip = ["192.168.0.1","10.0.0.1","172.16.0.1","200.100.50.1","169.254.0.1"]
+Class = {
+    "192.168.0.1":"class C",
+    "10.0.0.1":"class A",
+    "172.16.0.1":"class B",
+    "200.100.50.1":"adresse IP publique",
+    "169.254.0.1":"adresse IP de lien local (APIPA)"
+}
+#1/
+print(adresses_ip[0])
+#2/
+print(adresses_ip[-1])
+#3/
+print(adresses_ip[2])
+#4/
+adresses_ip.append("172.31.0.1")
+#5/
+adresses_ip.remove("200.100.50.1")
+#6/
+print(len(adresses_ip))
+#7/
+if "192.168.0.1" in adresses_ip:
+    print("exist")
+else:
+    print("doesn't exist")
+#8/
+print("la class d'adresse ip 10.0.0.1 est ",Class["10.0.0.1"])
+#9/
+
+
